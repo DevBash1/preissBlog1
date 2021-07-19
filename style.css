@@ -1,0 +1,105 @@
+nav *{
+color:white;
+}
+nav{
+  background:rgb(7, 2, 22);
+  position:fixed;
+}
+#menuContent{
+background:rgba(0, 0, 0, 0.329);
+height:100% !important;
+display:none;
+}
+#menuContent #main *{
+  color:white;
+  text-transform:uppercase;
+}
+#menuContent #main .w3-ul li{
+border:none !important;
+}
+#menuContent #main *:hover{
+  color:rgb(184, 22, 35) !important;
+  }
+#menuContent #main{
+width:70%;
+height:100%;
+background:rgb(8, 3, 20);
+box-shadow:3px 1px 10px 0px rgb(170, 170, 170);
+
+}
+#searchEnv {
+margin-top:80px;
+position:fixed;
+width:100%;
+padding-right:5px;
+}
+
+#searchEnv #searchCtn{
+color:white;
+box-shadow:1px 1px 10px 0px black;
+width:360px;
+}
+#searchEnv #searchCtn input{
+  padding:2px;
+  background:rgba(181, 175, 238, 0.342);
+  border-radius:3px;
+  width:80%;
+  color:white;
+  padding:7px;
+}
+#searchEnv #searchCtn button{
+  width:15%;
+  background:red;
+  color:white;
+  padding:7px;
+}
+#searchEnv #searchCtn button:hover{
+  background:rgb(160, 1, 1);
+
+}
+button:hover{
+  color:rgb(165, 3, 3);
+}
+#searchEnv .box{
+  width:20px;
+  height: 20px;
+ transform: rotate(45deg);
+ position:absolute;
+background:rgb(53, 1, 1);
+ margin-left:300px;
+ margin-top:-15px;
+ z-index:-1;
+ display:inherit !important;
+ }
+ #blogGroup{
+   width:100%;
+   height:300px;
+   max-width:400px;
+   box-shadow:1px 1px 1px 10px rgb(231, 230, 230);
+   background-size:100% 100%;
+   background-image:url("images/batteryImage.jpg");
+ }
+ #pcOnly{
+   display:none;
+ }
+ #pcOnly button{
+   font-size:medium;
+   padding:10px 10px;
+  text-transform:capitalize;
+  font-weight:bold;
+  }
+ #pcOnly button:hover{
+  background:rgba(255, 255, 255, 0.219);
+  color:rgb(247, 236, 236) !important; 
+ }
+ nav *:hover{
+   color:rgb(201, 189, 223);
+ }
+ @media screen and (min-width:600px){
+   #pcOnly{
+     display:flex;
+   }
+   #menu{
+     display:none;
+   }
+ }
