@@ -75,18 +75,31 @@ background:rgb(53, 1, 1);
    width:100%;
    height:300px;
    max-width:400px;
-   box-shadow:1px 1px 1px 10px rgb(231, 230, 230);
+   box-shadow:1px 1px 10px 0px rgb(231, 230, 230);
    background-size:100% 100%;
-   background-image:url("images/batteryImage.jpg");
+   background-image:url("images/battery.jpg");
+   margin:14px;
  }
+ #blogGroup *{
+   color:white;
+   font-weight:bolder;
+   
+ }
+ #blogGroup  button{
+  color:white;
+  font-weight:lighter !important;
+  
+}
+
  #pcOnly{
    display:none;
  }
  #pcOnly button{
-   font-size:medium;
+   font-size:medium !important;
    padding:10px 10px;
   text-transform:capitalize;
   font-weight:bold;
+  
   }
  #pcOnly button:hover{
   background:rgba(255, 255, 255, 0.219);
@@ -95,6 +108,14 @@ background:rgb(53, 1, 1);
  nav *:hover{
    color:rgb(201, 189, 223);
  }
+ #bodyB{
+   position:abolute;
+   margin-top:60px;
+ }
+ #topBlogs{
+   box-shadow:1px 1px 10px 0px rgb(197, 196, 196);
+   padding:10px;
+ }
  @media screen and (min-width:600px){
    #pcOnly{
      display:flex;
@@ -102,4 +123,17 @@ background:rgb(53, 1, 1);
    #menu{
      display:none;
    }
+   #logo{
+     width:120px;
+     margin-top:10px;
+   }
+   #blogGroup:nth-child(1){
+     height:300px;
+     max-width:60%;
+   }
+   #blogGroup{
+    height:inherit;
+    max-width:300px;
+
+  }
  }
