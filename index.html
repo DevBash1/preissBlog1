@@ -8,10 +8,13 @@
 <link rel="stylesheet" href="lib/w3css.css">
 <link rel="stylesheet" href="lib/cssLibrary.css">
 <script src="lib/jquery.js"></script>
+<script src="dataProcess.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog Codes</title>
 </head>
 <body>
+  
+
 <div class="fixed w3-block" id="menuContent"><!--menu content-->
 
 <div class="w3-padding" id="main">
@@ -84,8 +87,7 @@
 
   <div id="mainList">
 <p class="flexBetween" >Read More <a href="#" style="color:rgb(192, 192, 192);">Show More</a></p>
-<hr><br>
-
+<hr>
 <div id="mainListContent" class="flexRound w3-block" style="flex-wrap: wrap;">
 
   <div id="blogLink"class="flexBetween w3-block">
@@ -150,7 +152,7 @@
   <p class="flexBetween w3-large" style="font-weight:bolder;" >Follow By Email </p>
 
 <p class="w3-small">Get all latest content delivered straight to your inbox. </p>
-<input type="Enter Email Address">
+<input type="Enter Email Address" placeholder="Enter Email Address" class="w3-input">
 <button class="w3-button w3-large w3-block" style="background:rgb(255, 38, 0); color:white">Subcribe</button>
 </div><br><!--email ends-->
 
@@ -252,9 +254,27 @@
 </div>
 
 </div>
+  
+
+<footer class="w3-footer"  ><br>
+
+  <div id="boxF" class="w3-container">
+    <b class="follow">FOLLOW US</b><br>
+  <button class="fa fa-facebook"></button>
+  <button class="fa fa-twitter"></button>
+  <button class="fa fa-youtube"> </button>
+  <button class="fa fa-instagram"></button>
   </div>
+
+<div id="lastBox" class="flexBetween w3-block w3-padding">
+<span>Developed By PrieseCamp</span>
+<div class="flexRound"><button>Home</button> <button>About</button> <button>Contact</button></div>
+</div>
+
+</footer>
 
 </body>
 <script src="lib/MfunctionsLap.js"></script>
 <script src="main.js"></script>
+
 </html>

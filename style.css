@@ -139,6 +139,7 @@ flex-flow:row wrap;
  #topList #info{
 background:none;
 box-shadow:none;
+height:auto !important;
  }
  #blogLink{
    margin-top:20px !important;
@@ -154,7 +155,7 @@ height:100%;
  }
  #blogLink #blogLinkInfo{
    height:inherit;
-   width:60%;
+  
  }
  #blogLink #blogLinkInfo h1{
    padding:0;
@@ -273,8 +274,85 @@ margin:3px;
  #mainListContent #blogLink{
   flex-flow:row-reverse nowrap !important;
 }
+#blogLink #pcOnly{
+  display:none !important;
+}
+#blogLinkInfo{
+  width:100%;
+}
+#blogLink #mobileOnly{
+  display:block;
+  width:100%;
+  min-height:150px;
+  max-height:240px;
+  z-index:0;
+  font-size:auto;
+}
+#blogLink *{
+  text-align:center;
+}
+footer{
+  background:rgb(21, 16, 24);
+  flex-flow:row wrap;
+ 
+ justify-content:center;
+ }
 
+footer *{
+  color:white;
+}
+footer .fa{
+  padding:10px;
+  color:white;
+  background:rgba(112, 112, 112, 0.247);
+  width:50px;
+  font-size:large;
+}
+footer .follow{
+  margin-left: 3px;
+}
+footer .fa:hover{
+  background:rgba(87, 87, 87, 0.747);
+}
+#boxF{
+  margin:0 auto;
+}
+#lastBox{
+  margin-top:10px;
+  background:rgb(27, 25, 25);
+}
+#lastBox button:hover{
+  color:rgb(255, 55, 55);
+}
+#scrollTop{
+  position:fixed;
+  width:50px;
+  height:50px;
+  background:var(--red);
+  right:0;
+  bottom:0;
+  z-index:1;
+}
+@media screen and (min-width:600px){
+  footer{
+    justify-content:flex-end !important;
+  }
+  #blogLink #mobileOnly{
+  display:none;
+}
+
+#blogLink *{
+  text-align:auto;
+}
+#blogLink #pcOnly{
+  display:block !important;
+}
+}
  @media screen and (min-width:800px){
+  #blogLinkInfo{
+    
+    width:60%;
+  }
   #mainListContent #blogLink{
     flex-flow:row wrap !important;
   }
