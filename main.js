@@ -53,6 +53,13 @@ The most popular mobile operating system of the present time is Android.  Its p�
 `,//this should be the blog content in text format admin can update in textarea
 
 "date":"july - 2020"
+,//you should make simple table for comments
+"comments":[{
+  "name":"admin Example",
+  "image":"img4.png", //example
+  "content":"its cool"
+}]
+
 },
 
 {"title":" Top 10 Programming Languages to learn in 2021",
@@ -66,7 +73,14 @@ Admin July 14, 2021
 The most popular mobile operating system of the present time is Android.  Its p…
 `,//this should be the blog content in text format admin can update in textarea
 
-"date":"july - 2020"},
+"date":"july - 2020"
+,//you should make simple table for comments
+"comments":[{
+  "name":"admin Example",
+  "image":"img4.png", //example
+  "content":"its cool"
+}]
+},
 
 {"title":"5 Best Free Keyword Research Tool For Bloggers 2021",
 "link":"#",
@@ -79,7 +93,15 @@ Admin July 14, 2021
 The most popular mobile operating system of the present time is Android.  Its p…
 `,//this should be the blog content in text format admin can update in textarea
 
-"date":"july - 2020"},
+"date":"july - 2020"
+
+,//you should make simple table for comments
+"comments":[{
+  "name":"admin Example",
+  "image":"img4.png", //example
+  "content":"its cool"
+}]
+},
 
 {"title":"How To Make Money From Blogging In 2022",
 "link":"#",
@@ -92,7 +114,14 @@ Admin July 14, 2021
 The most popular mobile operating system of the present time is Android.  Its p…
 `,//this should be the blog content in text format admin can update in textarea
 
-"date":"july - 2020"},
+"date":"july - 2020"
+,//you should make simple table for comments
+"comments":[{
+  "name":"admin Example",
+  "image":"img4.png", //example
+  "content":"its cool"
+}]
+},
 {"title":"Colour change facebook name account kaise banaye-full guide with working method",
 "link":"#",
 "image":"img3.jpg",
@@ -104,7 +133,14 @@ Admin July 14, 2021
 The most popular mobile operating system of the present time is Android.  Its p…
 `,//this should be the blog content in text format admin can update in textarea
 
-"date":"july - 2020"}
+"date":"july - 2020"
+,//you should make simple table for comments
+"comments":[{
+  "name":"admin Example",
+  "image":"img4.png", //example
+  "content":"its cool"
+}]
+}
 ];//its example
 
 function showBlogs(arr=topBlogs){
@@ -150,13 +186,37 @@ ${e.blogContent.length>50 ? e.blogContent.slice(0,50)+"....":e.blogContent}
   </div>
 `)
 });
+}
 
+function fetchCommets(arr=topBlogs){//this function will fetch radom comments from all blogs
+let cmt=[];
+  const comments=arr.map((e,i)=>{
+ cmt.push(e.comments[Math.floor(Math.random()*e.comments.length)])
+ return e.comments.length>0
+});
+console.log(cmt);
+return cmt;
+}
 
+function showSomeComments(arr=fetchCommets()){
+ arr= arr.length>7 ? arr.slice(0,7):arr;
+  $("#comments").html("");
+  arr.forEach((e)=>{
+$("#comments").append(`
+<div id="person" class="flexBetween w3-block ">
+<img src="images/${e.image}" alt="">
+<div>
+  <b>${e.name}</b><br>
+  <span>${e.content}</span>
+</div>
+</div>
+`)});
 }
 
 showAndHideSearch();
 showAndHideMenu();
 showBlogs();
 showBlogsList();
+showSomeComments();
 }//end onload
 

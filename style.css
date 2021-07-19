@@ -200,7 +200,9 @@ box-shadow:1px 1px 4px 0px lightgrey;
   rgb(247, 0, 255),rgb(255, 60, 0));
   color:white
 }
-
+:root{
+  --red:rgb(255, 60, 0);
+}
 #info #media #twitter{
   background:rgb(0, 174, 255);
   color:white;
@@ -219,7 +221,63 @@ box-shadow:1px 1px 4px 0px lightgrey;
    padding:0px 10px;
    width:auto  !important;
  }
+ #comments {
+   flex-flow:row wrap;
+ }
+ #comments img{
+width:30%;
+height:50px;
+
+ }
+ #comments div{
+   width:65%;
+ }
+ #comments div span{
+   color:dimgrey;
+ }
+ #comments #person{
+   margin-top:10px;
+ }
+ .about button{
+   font-weight:bolder;
+ }
+ #listSmall{
+   font-size:small;
+ }
+ #searchBtn{
+background:var(--red);
+color:white;
+
+width:18%;
+ }
+ li{
+   color:rgb(112, 112, 112);
+ }
+ li:hover{
+   background:rgba(235, 234, 234, 0.952);
+   color:rgb(124, 0, 0);
+   text-decoration:underline;
+ }
+ #tags button{
+padding:5px;
+border-radius:3px;
+background:rgb(243, 243, 243);
+font-size:small;
+color:grey;
+margin:3px;
+ }
+ #tags button:hover{
+   background:var(--red);
+   color:white;
+ }
+ #mainListContent #blogLink{
+  flex-flow:row-reverse nowrap !important;
+}
+
  @media screen and (min-width:800px){
+  #mainListContent #blogLink{
+    flex-flow:row wrap !important;
+  }
   #topList #mainList{
     width:60%;
   }
