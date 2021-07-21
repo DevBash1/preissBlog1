@@ -1,4 +1,4 @@
-onload=()=>{
+
 function showAndHideSearch(){
   let show=true;
 $("nav #searchMe").click(function(){
@@ -63,14 +63,14 @@ function showBlogs(arr=topBlogs){
 }//show  blog ends
 
 
-function showBlogsList(arr=topBlogs){//this function display the blog list almost all
+function showBlogsList(arr=topBlogs,path=""){//this function display the blog list almost all
   $("#mainListContent").html("");
   arr.forEach((e,i)=>{
    
     $("#mainListContent").append(`
 
-  <div index="${i}" onclick="href('${e.link}')"  id="blogLink"class="flexBetween w3-block">
-    <img id="pcOnly" src="images/${e.image}">
+  <div index="${i}" id="blogLink" class="flexBetween w3-block">
+    <img id="pcOnly" src="${path}images/${e.image}">
     <div id="blogLinkInfo" class="w3-container">
 <h1>
  ${e.title}
@@ -86,6 +86,13 @@ ${e.blogContent.length>50 ? e.blogContent.slice(0,50)+"....":e.blogContent}
   </div>
 `)
 });
+$("#mainListContent #blogLink").click(function(){
+  let index=$(this).attr("index");
+localStorage.setItem("blogId",index);
+setTimeout(() => {
+  window.location.href= window.location.pathname.includes("pages") ? "index.html":"pages/index.html";
+}, 0);
+})
 }
 
 function fetchCommets(arr=topBlogs){//this function will fetch radom comments from all blogs
@@ -98,13 +105,13 @@ console.log(cmt);
 return cmt;
 }
 
-function showSomeComments(arr=fetchCommets()){
+function showSomeComments(arr=fetchCommets(),path=""){
  arr= arr.length>7 ? arr.slice(0,7):arr;
   $("#comments").html("");
   arr.forEach((e)=>{
 $("#comments").append(`
 <div id="person" class="flexBetween w3-block ">
-<img src="images/${e.image}" alt="">
+<img src="${path}images/${e.image}" alt="">
 <div>
   <b>${e.name}</b><br>
   <span>${e.content}</span>
@@ -112,14 +119,4 @@ $("#comments").append(`
 </div>
 `)});
 }
-
-showAndHideSearch();
-showAndHideMenu();
-showBlogs();
-showBlogsList();
-showSomeComments();
-setTimeout(() => {
-  $("html,body,#bodyM").animate({scrollTop:5000},"fast");
-},100);
-}//end onload
 

@@ -8,9 +8,10 @@ color:white;
 body{
   background:rgb(244, 244, 245);
 }
-nav{
+#nav{
   background:rgb(7, 2, 22);
   position:fixed;
+  
 }
 #menuContent{
 background:rgba(0, 0, 0, 0.329);
@@ -35,15 +36,15 @@ box-shadow:3px 1px 10px 0px rgb(170, 170, 170);
 
 }
 #searchEnv {
-margin-top:80px;
+margin-top:70px;
 position:fixed;
-width:100%;
+width:98%;
 padding-right:5px;
 }
 
 #searchEnv #searchCtn{
 color:white;
-box-shadow:1px 1px 10px 0px black;
+
 width:360px;
 }
 #searchEnv #searchCtn input{
@@ -79,13 +80,13 @@ background:rgb(53, 1, 1);
  display:inherit !important;
  }
  #blogGroup{
-   width:100%;
+   width:98%;
    height:300px;
    
    box-shadow:1px 1px 10px 0px rgb(231, 230, 230);
    background-size:100% 100%;
    background-image:url("images/battery.jpg");
-   margin:14px;
+   margin:14px -7px;
    cursor:pointer;
  }
  #blogGroup *{
@@ -112,6 +113,10 @@ background:rgb(53, 1, 1);
  #pcOnly button:hover{
   background:rgba(255, 255, 255, 0.219);
   color:rgb(247, 236, 236) !important; 
+ }
+ #mail{
+   border:1px solid rgb(212, 210, 210);
+   transform:translate(0px,-5px)
  }
  nav *:hover{
    color:rgb(201, 189, 223);
@@ -278,11 +283,11 @@ margin:3px;
   display:none !important;
 }
 #blogLinkInfo{
-  width:100%;
+  width:98%;
 }
 #blogLink #mobileOnly{
   display:block;
-  width:100%;
+  width:98%;
   min-height:150px;
   max-height:240px;
   z-index:0;
@@ -323,6 +328,9 @@ footer .fa:hover{
 }
 #lastBox button:hover{
   color:rgb(255, 55, 55);
+}
+*{
+font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 #scrollTop{
   position:fixed;

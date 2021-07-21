@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="lib/w3css.css">
-<link rel="stylesheet" href="lib/cssLibrary.css">
-<script src="lib/jquery.js"></script>
-<script src="dataProcess.js"></script>
+  <link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../lib/w3css.css">
+<link rel="stylesheet" href="../lib/cssLibrary.css">
+<script src="../lib/jquery.js"></script>
+<script src="../dataProcess.js"></script>
+<link rel="stylesheet" href="page.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Codes</title>
+  <title>Blog Codes view</title>
 </head>
 <body>
   
@@ -19,7 +20,7 @@
 
 <div class="w3-padding" id="main">
   <nav class="flexBetween">
-    <img src="images/logo.png">
+    <img src="../images/logo.png" height="50">
     <button id="close" class="fa fa-times" style="overflow:hidden;"></button>
   </nav>
   <section>
@@ -35,9 +36,9 @@
 
 </div>
 
-  <nav id="nav" class="flexBetween w3-block w3-nav w3-xlarge" style="padding :10px;">
+  <nav id="nav"  class="flexBetween w3-block w3-nav w3-xlarge" style="padding :10px;">
     <button class="fa fa-reorder"  id="menu" style="color:white;"></button>
-    <img src="images/logo.png" id="logo" style="height:80%;">
+    <img src="../images/logo.png" id="logo" style="height:80%;">
 
     <div class="flexRound">
 
@@ -67,8 +68,8 @@
 <br><br>
   <div id="bodyB" class="w3-container"><!--body starts-->
 
-  <div id="topBlogs" class="flexRound w3-block" style="flex-flow:row wrap;"><!--the first blog you see-->
-
+  <div id="topBlogs" class="flexRound " style="display:none; flex-flow:row wrap;"><!--the first blog you see-->
+<!--
 <div id="blogGroup" class="flexBottom">
 <div class="flexBottom w3-padding w3-block" style="flex-wrap:wrap; width:100%; height:100%;background:linear-gradient(rgb(255, 255, 255),rgba(0, 0, 0, 0.288))">
   <h2 class="w3-center w3-bolder  w3-block" style="padding:0;">
@@ -77,26 +78,77 @@
 <div class="flexStart w3-block">
 <button class="fa fa-user-o"> admin</button>
 <button class="fa fa-clock"> 3:4 2020</button></div>
-<!--date here-->
+<!--date here--
 </div>
-</div>
-
-  </div>
-<br>
+</div>--></div>
 <div id="topList" class="flexRound w3-block"><!--blog list in two columns-->
 
   <div id="mainList">
-<p class="flexBetween" >Read More <a href="#" style="color:rgb(192, 192, 192);">Show More</a></p>
+
+<!--contents starts-->
+<div>
+<div id="smallHeading">
+  <span><span style="color:rgb(255, 0, 55)">home</span> <i class="fa fa-caret-right"></i></span><span>Tips & Trikes</span>
+  </div>
+<h1 id="blogHeading">
+ loading..
+</h1>
+<diV id="blogInfo">
+<span id="Admin" class="fa fa-user-o"> admin</span>
+<span id="date">july 2021</span>
+<span id="coments"> 0 <i class="fa fa-comment-o"></i></span>
+</diV><br>
+<!--share media-->
+<div class="blogShare" id="media"><!--you update this social medai likes-->
+
+  <button id="share">
+    <i class="fa fa-share"></i>
+    </button>
+    
+  <button id="facebook">
+  <i class="fa fa-facebook"></i>
+  </button>
+
+  
+  <button id="twitter">
+    <i class="fa fa-twitter"></i>
+    </button>
+
+    
+  <button id="p">
+    <i class="fa fa-pintress">In</i>
+    </button>
+
+    
+  <button id="mailb">
+    <i class="fa fa-envelope"></i>
+    </button>
+    
+    
+  <button id="share">
+    <i class="fa fa-plus"></i>
+    </button>
+
+  </div>
+<br><br>
+
+
+<div id="blogContent"><!--blog content here with the html tags-->
+</div>
+</div>
+<!--contents ends--><hr>
+<p class="flexBetween" >You might like<a href="#" style="color:rgb(192, 192, 192);">Show More</a></p>
 <hr>
 <div id="mainListContent" class="flexRound w3-block" style="flex-wrap: wrap;">
 
   <div id="blogLink"class="flexBetween w3-block">
-    <img src="images/battery.jpg">
+    <img src="../images/battery.jpg">
     <div id="blogLinkInfo" class="w3-container">
-<h1>
+<h1 id="title">
   7 Ways To Save Battery Life Of Android Phone
   </h1>
-<div id="date">admin 22 july 2020</div>
+<div id="date">22 july 2020</div>
+
 <div>
   There are some issues that are draining the battery of your Android smartphone …
 </div>
@@ -152,7 +204,7 @@
   <p class="flexBetween w3-large" style="font-weight:bolder;" >Follow By Email </p>
 
 <p class="w3-small">Get all latest content delivered straight to your inbox. </p>
-<input type="Enter Email Address" placeholder="Enter Email Address" class="w3-input">
+<input type="Enter Email Address" id="mail" placeholder="Enter Email Address" class="w3-input">
 <button class="w3-button w3-large w3-block" style="background:rgb(255, 38, 0); color:white">Subcribe</button>
 </div><br><!--email ends-->
 
@@ -207,7 +259,7 @@
 
 <hr><br>
 
-<img src="images/tips.jpg" width="30" hieght="30"> <b class="w3-padding">Admin</b><br><br>
+<img src="../images/tips.jpg" width="30" hieght="30"> <b class="w3-padding">Admin</b><br><br>
 <button class="w3-bold" onclick="href('no link')">
   Admin
   </button><br>
@@ -246,7 +298,10 @@
             <li>          <span>JULY 2018</span> <span>(5)</span></li>
   </ul>
   </div><!--end categories-->
-  
+  <br>
+<div style="width:100%; height:800px;background:white;">
+
+</div>
 
 </div><!---info ends-->
 
@@ -274,8 +329,7 @@
 </footer>
 
 </body>
-<script src="lib/MfunctionsLap.js"></script>
-<script src="main.js"></script>
+<script src="../lib/MfunctionsLap.js"></script>
+<script src="../main.js"></script>
 <script src="index.js"></script>
-
 </html>
